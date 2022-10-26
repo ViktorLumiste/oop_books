@@ -1,10 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Books</title>
 </head>
 <body>
+<div class="container">
+    <h1>Add Book</h1>
+    <form>
+        <b>Title</b>
+        <input type="text" id="title">
+        <b>Author</b>
+        <input type="text" id="name">
+        <b>ISBN#</b>
+        <input type="text" id="ISBN">
+        <input type="submit" class="btn">
+    </form>
 
+    <table id="bookData">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN#</th>
+            <th></th>
+        </tr>
+    </table>
+</div>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="book.js"></script>
+<script src="UI.js"></script>
+<script src="LS.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
