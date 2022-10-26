@@ -19,6 +19,8 @@ function addBook(e){
     ISBNIn.value = ""
     e.preventDefault()
 }
-
+function deleteAllBooks(e){
+    ui.deleteBooks()
+}
 
 

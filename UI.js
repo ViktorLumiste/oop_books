@@ -21,12 +21,12 @@ class UI {
         // addBookLS(toLSData)
 
     }
-    deleteBook(e){
+    deleteBook(e) {
         let curBooki
         let name = e.target.parentElement.parentElement.children[0].innerText
         let author = e.target.parentElement.parentElement.children[1].innerText
         let ISBN = e.target.parentElement.parentElement.children[2].innerText
-        let curBook = [name,author,ISBN]
+        let curBook = [name, author, ISBN]
         if (e.target.textContent === "X") {
             if (confirm("are you sure you want to remove this book?")) {
                 curBooki = e.target.parentElement.parentElement.rowIndex
@@ -34,7 +34,12 @@ class UI {
                 // deleteBookLS(curBook)
             }
         }
-
+    }
+    deleteBooks(e){
+        let rows = data.rows.length -1
+        for( let i = rows; i > 0;i--){
+            data.deleteRow(1)
+        }
     }
 }
 
