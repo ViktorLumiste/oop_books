@@ -9,20 +9,14 @@ class LS {
         books.push(book)
         localStorage.setItem("books", JSON.stringify(books))
     }
-    deleteBookLS(book){
+    deleteBookLS(booki){
         let books
         if (localStorage.getItem("books") === null){
             books = []
         } else {
             books = JSON.parse(localStorage.getItem("books"))
         }
-        books.forEach((bookLS, bookIndex) => {
-            const sbookLS = JSON.stringify(bookLS)
-            const sbook = JSON.stringify(book)
-            if(sbookLS === sbook){
-                books.splice(bookIndex, 1)
-            }
-        })
+        books.splice(booki-1, 1)
         localStorage.setItem('books', JSON.stringify(books))
     }
     getBooksFromLS(){
@@ -33,9 +27,9 @@ class LS {
             books = JSON.parse(localStorage.getItem("books"))
         }
         books.forEach((book, bookIndex) => {
-            let title = book[0]
-            let author = book[1]
-            let ISBN = book[2]
+            let title = book["name"]
+            let author = book["author"]
+            let ISBN = book["ISBN"]
             const row = data.insertRow(bookIndex+1)
             const cell1 = row.insertCell(0)
             const cell2 = row.insertCell(1)

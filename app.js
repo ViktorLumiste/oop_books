@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", ls.getBooksFromLS)
 function addBook(e){
     let book = new Book(titleIn.value, nameIn.value, ISBNIn.value)
     ui.addBook(book)
+    ls.addBookLS(book)
 
     titleIn.value = ""
     nameIn.value = ""
@@ -21,6 +22,7 @@ function addBook(e){
 }
 function deleteAllBooks(e){
     ui.deleteBooks()
+
 }
 
 
